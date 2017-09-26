@@ -1,0 +1,5 @@
+{
+  "role_name": "$mysuper.role",
+  "short_description": "This Ansible Role infuses antigravity, you are warned",
+  "allow_duplicates": "no"
+}
