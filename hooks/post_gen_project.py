@@ -14,7 +14,7 @@ except NameError:
 
 folders = OrderedDict()
 
-folders['tasks']= {
+folders['tasks'] = {
     'question': '\nShould it have tasks? ',
     'hint': '  Add task name i.e (Install packages) ',
     'action': '- name: {}\n  # TODO\n\n'
@@ -56,7 +56,7 @@ def configure_role():
                 with open('{}/main.yml'.format(folder_name), 'a') as fp:
 
                     if 'pre_hint' in folder:
-                        if read_user_yes_no(folder['pre_hint'], default_value=u'yes'):
+                        if read_user_yes_no(folder['pre_hint'], default_value=u'yes'): # NOQA
                             fp.write(folder['pre_action'])
                         else:
                             continue
@@ -67,7 +67,7 @@ def configure_role():
                         action_name = input(folder['hint'])
 
         else:
-           shutil.rmtree(folder_name)
+            shutil.rmtree(folder_name)
 
 
 if __name__ == '__main__':
